@@ -1,5 +1,6 @@
 import './styles.css'
 
-import { getWeatherData } from './app/weather'
+import { getWeatherData, filterWeatherData } from './app/weather'
 
-// getWeatherData("bangkok")
+
+filterWeatherData('bangkok')
