@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+    border: black 1px solid;
+}
+
+.grid div {
+    display: flex;
+    flex-direction: column;
+}

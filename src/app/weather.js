@@ -6,11 +6,10 @@ const APIKEY = "H4Q22D2ZHZT2TZW777V2F3A7E"
 export async function getWeatherData(city) {
     const requestURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${APIKEY}`
 
-    // TODO: error handling
+    // TODO: error handling 
     try {
         let response = await fetch(requestURL, {mode: 'cors'})
         let data = await response.json()
-        console.log(data);
         return data
 
     } catch(e) {
@@ -35,6 +34,5 @@ export async function filterWeatherData(city) {
     object.precipprob = data.currentConditions.precipprob
     object.uvindex = data.currentConditions.uvindex
 
-    console.log(object);
     return object
 }
